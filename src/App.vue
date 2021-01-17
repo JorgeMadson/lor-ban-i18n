@@ -1,17 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="Vue logo" src="./assets/logo.webp" />
+  <deck-dock />
+  <footer>Desenvolvido por <a href="http://jorgemadson.github.io">Jorge Madson</a></footer>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DeckDock from "./components/DeckDock.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    DeckDock,
+  },
+};
 </script>
 
 <style>
@@ -22,5 +23,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+footer{
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
 }
 </style>
