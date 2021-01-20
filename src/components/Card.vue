@@ -1,7 +1,7 @@
 <template>
 <li class="card">
     <h2>{{card.count}}x</h2>
-    <img :src="cardUrl(card.code)" style="width:10rem">
+    <img :src="cardUrl(card.code)" style="">
     
 </li>
 </template>
@@ -28,6 +28,11 @@
 <style scoped>
 .card {
     padding: 0 0 2rem 2rem;
+    
+}
+img {
+    width:10rem;
+    height: 15rem;
 }
 </style>
   
