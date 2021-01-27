@@ -26,7 +26,7 @@ export default {
 }
 footer{
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 10px;
+  right: 10px;
 }
 </style>
