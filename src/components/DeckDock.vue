@@ -1,10 +1,19 @@
 <template>
   <div class="dock">
     <label for="deck-code">Cole seu código:</label>
-    <input id="deck-code" v-model="code" placeholder="CEBAIAIFB4WDANQIAEAQGDAUDAQSIJZUAIAQCBIFAEAQCBAA" />
+    <input
+      id="deck-code"
+      v-model="code"
+      placeholder="CEBAIAIFB4WDANQIAEAQGDAUDAQSIJZUAIAQCBIFAEAQCBAA"
+    />
     <template id="array-rendering" v-if="!error">
       <ul class="card" v-if="!error">
-        <card v-for="decodeCard in decodedDeck" :card="decodeCard" :key="decodeCard.code"> </card>
+        <card
+          v-for="decodeCard in decodedDeck"
+          :card="decodeCard"
+          :key="decodeCard.code"
+        >
+        </card>
       </ul>
     </template>
     <p v-else>{{ error }}</p>
@@ -20,6 +29,10 @@ export default {
   name: "DeckDock",
   data() {
     return { code: "", decodedDeck: "", error: "" };
+  },
+  created() {
+    let urlParams = new URLSearchParams(window.location.search);
+    this.code = urlParams.has("code") ? urlParams.get("code") : '';
   },
   watch: {
     // Se o código tiver mais de 30 caracteres ele faz a request
