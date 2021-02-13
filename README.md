@@ -1,5 +1,7 @@
 # lor-ban-i18n
 
+Link: https://festive-mirzakhani-00c3c3.netlify.app/
+
 ## Project setup
 ```
 npm install
